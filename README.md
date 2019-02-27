@@ -5,7 +5,7 @@ Easily use dot notation to `get`, or `set` a property of a nested object.
 # Install
 
 ```bash
-$ npm install object-set-property --save
+$ npm install object-dotty --save
 ```
 
 # Usage
