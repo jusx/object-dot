@@ -1,1 +1,1 @@
-module.exports = require('./lib/object-set-property')
+module.exports = require('./lib/object-dotty')
