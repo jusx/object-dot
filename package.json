@@ -1,0 +1,35 @@
+{
+  "name": "object-set-property",
+  "version": "1.0.0",
+  "description": "Use dot notation to easily set a value on a property of a nested object.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jusx/object-set-property.git"
+  },
+  "keywords": [
+    "object",
+    "property",
+    "set",
+    "dotty",
+    "notation",
+    "nested",
+    "dot"
+  ],
+  "author": {
+    "name": "Justin Law hello@justinlaw.org",
+    "email": "hello@justinlaw.org"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jusx/object-set-property/issues"
+  },
+  "homepage": "https://github.com/jusx/object-set-property#readme",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
