@@ -1,1 +1,1 @@
-module.exports = require('./lib/object-dotty')
+module.exports = require('./lib/object-dot')

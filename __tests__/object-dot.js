@@ -1,4 +1,4 @@
-const odotty = require('object-dotty')
+const odotty = require('object-dot')
 
 describe('set', ()=> {
   test('deep nested', ()=> {
@@ -41,4 +41,12 @@ describe('get', () => {
       odotty.get({ object, path: 'a.b.c' })
     ).toBeUndefined()
   })
+})
+
+test('d', ()=> {
+  const objectd = require('object-dot')
+  let object = { foo: { bar: 'you!' }}
+  console.log(
+    objectd.get({ object, path: 'foo.bar.c.d'})
+  )
 })
