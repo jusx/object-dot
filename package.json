@@ -1,5 +1,5 @@
 {
-  "name": "object-dotty",
+  "name": "object-dot",
   "version": "1.0.0",
   "description": "Easily use dot notation to `get`, or `set` a property of a nested object.",
   "main": "index.js",

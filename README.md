@@ -1,31 +1,31 @@
-# 📦 Object-Dotty
+# 📦 object-dot
 
 Easily use dot notation to `get`, or `set` a property of a nested object.
 
 # Install
 
 ```bash
-$ npm install object-dotty --save
+$ npm install object-dot --save
 ```
 
 # Usage
 
 ```js
-const objectD = require('object-dotty')
+const objectd = require('object-dotty')
 console.log(
-  objectD.set({ object: {}, path: 'foo.bar', value: 'you!' })
+  objectd.set({ object: {}, path: 'foo.bar', value: 'you!' })
 )
 //=> { foo: { bar: 'you!' } }
 
 let object = { foo: { bar: 'you!' }}
 console.log(
-  objectD.get({ object, path: 'foo.bar'})
+  objectd.get({ object, path: 'foo.bar'})
 )
 //=> you!
 
 let object = { foo: { bar: 'you!' }}
 console.log(
-  objectD.get({ object, path: 'foo'})
+  objectd.get({ object, path: 'foo'})
 )
 //=> { bar: 'you!' }
 ```
