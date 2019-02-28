@@ -1,33 +1,44 @@
 # 📦 object-dot
 
-Easily use dot notation to `get`, or `set` a property of a nested object.
-
-# Install
-
-```bash
-$ npm install object-dot --save
-```
+Easily use dot notation to `get`, or `set` a property of a nested object. A Node.js library.
 
 # Usage
 
-```js
-const objectd = require('object-dotty')
-console.log(
-  objectd.set({ object: {}, path: 'foo.bar', value: 'you!' })
-)
-//=> { foo: { bar: 'you!' } }
+## `set`
 
+Create the nested chain of objects with `set` and dot notation with one simple statement.
+
+```js
+const objectd = require('object-dot')
+console.log(
+  objectd.set({ object: {}, path: 'a.b.c', value: 'you!' })
+)
+//=> { a: { b: { c: 'you!' } } }
+```
+
+## `get`
+
+Get the value of a nested chain of objects without checking each object in the chain for its existence.
+
+```js
+const objectd = require('object-dot')
 let object = { foo: { bar: 'you!' }}
 console.log(
-  objectd.get({ object, path: 'foo.bar'})
+  objectd.get({ object, path: 'foo.bar.c.d'})
 )
-//=> you!
+//=> undefined
 
 let object = { foo: { bar: 'you!' }}
 console.log(
   objectd.get({ object, path: 'foo'})
 )
 //=> { bar: 'you!' }
+```
+
+# Install
+
+```bash
+$ npm install object-dot --save
 ```
 
 # License
