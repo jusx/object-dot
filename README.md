@@ -1,5 +1,7 @@
 # 📦 object-dot
 
+[![CircleCI](https://circleci.com/gh/jusx/object-dot.svg?style=svg)](https://circleci.com/gh/jusx/object-dot) ![npm](https://img.shields.io/npm/v/object-dot.svg?style=flat-square)
+
 Easily use dot notation to `get`, or `set` a property of a nested object. A Node.js library.
 
 # Usage
