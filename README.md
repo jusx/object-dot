@@ -1,6 +1,6 @@
 # 📦 object-dot
 
-[![CircleCI](https://circleci.com/gh/jusx/object-dot.svg?style=svg)](https://circleci.com/gh/jusx/object-dot) [![npm](https://img.shields.io/npm/v/object-dot.svg?style=flat-square)](https://www.npmjs.com/package/object-dot)
+[![CircleCI](https://circleci.com/gh/jusx/object-dot.svg?style=svg)](https://circleci.com/gh/jusx/object-dot) [![codecov](https://codecov.io/gh/jusx/object-dot/branch/master/graph/badge.svg)](https://codecov.io/gh/jusx/object-dot) [![npm](https://img.shields.io/npm/v/object-dot.svg?style=flat-square)](https://www.npmjs.com/package/object-dot)
 
 Easily use dot notation to `get`, or `set` a property of a nested object. A Node.js library.
 
