@@ -54,5 +54,8 @@
       "@semantic-release/npm",
       "@semantic-release/git"
     ]
+  },
+  "dependencies": {
+    "npm": "^6.5.0"
   }
 }
