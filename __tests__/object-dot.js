@@ -41,4 +41,11 @@ describe('get', () => {
       odjectd.get({ object, path: 'a.b.c' })
     ).toBeUndefined()
   })
+
+  test('default', () => {
+    let object = {}
+    expect(
+      odjectd.get({ object, path: 'a.b.c', value: 'foo' })
+    ).toBe('foo')
+  })
 })
