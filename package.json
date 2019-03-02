@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jusx/object-set-property.git"
+    "url": "git+https://github.com/jusx/object-dot.git"
   },
   "keywords": [
     "object",
@@ -33,12 +33,13 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jusx/object-set-property/issues"
+    "url": "https://github.com/jusx/object-dot/issues"
   },
-  "homepage": "https://github.com/jusx/object-set-property#readme",
+  "homepage": "https://github.com/jusx/object-dot#readme",
   "devDependencies": {
     "codecov": "^3.2.0",
     "jest": "^24.1.0",
+    "semantic-release": "^15.13.3",
     "standard": "^12.0.1"
   },
   "standard": {
