@@ -27,7 +27,7 @@ jobs:
             - v1-dependencies-
 
       - run: npm install
-      - run: npm install npm@6.5.0
+      - run: npm install npm@6.5.0 -g
       - save_cache:
           paths:
             - node_modules
