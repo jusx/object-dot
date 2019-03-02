@@ -9,7 +9,6 @@
     "test-ci": "standard && jest --collectCoverage && codecov",
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "prepublish": "npm test",
     "semantic-release": "semantic-release"
   },
   "engines": {
