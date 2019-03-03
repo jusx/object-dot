@@ -12,10 +12,21 @@ Create the nested chain of objects with `set` and dot notation with one simple s
 
 ```js
 const objectd = require('object-dot')
+
 console.log(
-  objectd.set({ object: {}, path: 'a.b.c', value: 'you!' })
+  objectd.set({ object: {}, path: 'a.b.c', value: 'foo' })
 )
-//=> { a: { b: { c: 'you!' } } }
+// => { a: { b: { c: 'foo' } } }
+
+// Array of the property chain will work too!
+console.log(
+  objectd.set({ object: {}, path: ['a', 'b', 'c'], value: 'foo' })
+)
+
+// Alternatively you may use arguments as parameters instead of an object.
+console.log(
+  objectd.set({}, 'a.b.c', 'foo')
+)
 ```
 
 ## `get`
@@ -45,8 +56,6 @@ console.log(
   objectd.get({ object, path: 'a.foo'})
 )
 //=> { bar: 'you!' }
-
-
 ```
 
 # Install
