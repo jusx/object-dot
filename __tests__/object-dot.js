@@ -30,6 +30,12 @@ describe('set', () => {
     odjectd.set({ object, path: 'a.b', value: 'foo' })
     expect(object).toEqual({ a: { exist: true, b: 'foo' } })
   })
+
+  test('with arguments instead of destructing object', () => {
+    let object = { a: { exist: true } }
+    odjectd.set(object, 'a.b', 'foo')
+    expect(object.a.b).toBe('foo')
+  })
 })
 
 describe('get', () => {
