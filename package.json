@@ -40,6 +40,7 @@
     "@semantic-release/git": "^7.0.8",
     "@semantic-release/github": "^5.2.10",
     "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
     "codecov": "^3.2.0",
     "jest": "^24.1.0",
     "semantic-release": "^15.13.3",
@@ -53,6 +54,7 @@
   "release": {
     "plugins": [
       "@semantic-release/npm",
+      "@semantic-release/release-notes-generator",
       "@semantic-release/git",
       "@semantic-release/github"
     ]
