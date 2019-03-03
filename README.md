@@ -23,22 +23,24 @@ console.log(
 Get the value of a nested chain of objects without checking each object in the chain for its existence.
 
 ```js
-// when one of the properties in the chain is undefined. Safely return undefined.
 const objectd = require('object-dot')
+
+// when one of the properties in the chain is undefined. Safely return undefined.
 let object = { foo: { bar: 'you!' }}
 console.log(
   objectd.get({ object, path: 'foo.bar.c.d'})
 )
 //=> undefined
 
-// return a default value if propery is undefined
-const objectd = require('object-dot')
-let object = { foo: { bar: 'you!' }}
-objectd.get({ object, path: 'foo.bar.c.d', value: 'my default value'})
+// return a default value if property is undefined
+object = { foo: { bar: 'you!' }}
+console.log(
+  objectd.get({ object, path: 'foo.bar.c.d', value: 'my default value'})
+)
 //=> 'my default value'
 
 // When the property exist.
-let object = { a: { foo: { bar: 'you!' } }}
+object = { a: { foo: { bar: 'you!' } }}
 console.log(
   objectd.get({ object, path: 'a.foo'})
 )
