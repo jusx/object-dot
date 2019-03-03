@@ -24,6 +24,12 @@ describe('set', () => {
     odjectd.set({ object, path: ['a', 'b', 'c'], value: 'my value' })
     expect(object).toEqual({ a: { b: { c: 'my value' } } })
   })
+
+  test('some property in the chain exists', () => {
+    let object = { a: { exist: true } }
+    odjectd.set({ object, path: 'a.b', value: 'foo' })
+    expect(object).toEqual({ a: { exist: true, b: 'foo' } })
+  })
 })
 
 describe('get', () => {
