@@ -18,6 +18,12 @@ describe('set', () => {
     odjectd.set({ object, path: 'a', value: 'my value' })
     expect(object.a).toBe('my value')
   })
+
+  test('array over dot notation', () => {
+    let object = {}
+    odjectd.set({ object, path: ['a', 'b', 'c'], value: 'my value' })
+    expect(object).toEqual({ a: { b: { c: 'my value' } } })
+  })
 })
 
 describe('get', () => {
