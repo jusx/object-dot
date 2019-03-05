@@ -56,6 +56,12 @@ console.log(
   objectd.get({ object, path: 'a.foo'})
 )
 //=> { bar: 'you!' }
+
+// Plain arguments as parameters will work too!
+console.log(
+  objectd.get(object, 'a.foo.bar')
+)
+// => 'you!'
 ```
 
 # Install
