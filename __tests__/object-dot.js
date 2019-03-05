@@ -67,6 +67,18 @@ describe('get', () => {
     ).toBe('foo')
   })
 
+  test('array over dot notation', () => {
+    let object = { a: { b: { c: 'd' } } }
+    expect(
+      odjectd.get({ object, path: ['a', 'b', 'c'] })
+    ).toEqual('d')
+
+    object.c = undefined
+    expect(
+      odjectd.get({ object, path: ['a', 'b', 'c'], value: 'default' })
+    ).toEqual('default')
+  })
+
   test('with arguments instead of destructing object', () => {
     let object = { a: { b: 'foo' } }
     expect(
