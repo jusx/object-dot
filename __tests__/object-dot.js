@@ -85,4 +85,11 @@ describe('get', () => {
       odjectd.get(object, 'a.b')
     ).toBe('foo')
   })
+
+  test('null values are acceptable', () => {
+    let object = { a: { b: null } }
+    expect(
+      odjectd.get(object, 'a.b')
+    ).toBeNull()
+  })
 })
