@@ -62,6 +62,13 @@ console.log(
   objectd.get(object, 'a.foo.bar')
 )
 // => 'you!'
+
+// Using arrays instead of dot notation is also supported.
+console.log(
+  objectd.get(object, ['a', 'foo', 'bar'])
+)
+// => 'you!'
+
 ```
 
 # Install
