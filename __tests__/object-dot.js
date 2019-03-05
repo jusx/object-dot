@@ -66,4 +66,11 @@ describe('get', () => {
       odjectd.get({ object, path: 'a.b.c', value: 'foo' })
     ).toBe('foo')
   })
+
+  test('with arguments instead of destructing object', () => {
+    let object = { a: { b: 'foo' } }
+    expect(
+      odjectd.get(object, 'a.b')
+    ).toBe('foo')
+  })
 })
