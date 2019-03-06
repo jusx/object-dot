@@ -92,6 +92,19 @@ console.log(
 
 ```
 
+## `extend`
+
+Use the `extend` method to add the methods, `get`, `set` and `exists` to the Object prototype chain:
+
+```js
+require('object-dot').extend()
+
+let object = { foo: { bar: 'you!' }}
+console.log(
+  Object.exists(object, 'foo.bar')
+)
+//=> true
+```
 # Install
 
 ```bash
