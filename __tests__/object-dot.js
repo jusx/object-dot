@@ -121,3 +121,12 @@ describe('exists', () => {
     ).toBe(false)
   })
 })
+
+describe('extend', () => {
+  const object = { foo: { bar: { a: { b: 'foo' } } } }
+  objectd.extend()
+  Object.set(object, 'foo.isCool', true)
+  expect(object.foo.isCool).toBe(true)
+  expect(Object.get(object, 'foo.bar.a.b')).toBe('foo')
+  expect(Object.exists(object, 'foo.bar')).toBe(true)
+})
