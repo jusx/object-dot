@@ -71,6 +71,27 @@ console.log(
 
 ```
 
+## `exists`
+
+The `exists` method determines if a chained object exist.
+
+```js
+const objectd = require('object-dot')
+
+// when one of the properties in the chain is undefined. Safely return undefined.
+let object = { foo: { bar: 'you!' }}
+console.log(
+  objectd.exists({ object, path: 'foo.bar'})
+)
+//=> true
+
+// alternatively using plain old arguments work too.
+console.log(
+  objectd.exists(object, 'foo.bar')
+)
+
+```
+
 # Install
 
 ```bash
