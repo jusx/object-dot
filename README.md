@@ -4,7 +4,7 @@
 
 Easily use dot notation to `get`, or `set` a property of a nested object. A node module.
 
-# ⚙️ Usage
+# Usage
 
 ## `set`
 
@@ -105,12 +105,12 @@ console.log(
 )
 //=> true
 ```
-# ⬇️ Install
+# Install
 
 ```bash
 $ npm install object-dot --save
 ```
 
-# 📄 License
+# License
 
 ISC
