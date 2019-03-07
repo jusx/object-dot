@@ -36,6 +36,13 @@ describe('set', () => {
     objectd.set(object, 'a.b', 'foo')
     expect(object.a.b).toBe('foo')
   })
+
+  test('array parameter mutation', () => {
+    let object = { a: { b: { c: 'd' } } }
+    let pathArray = ['a', 'b', 'c']
+    object.set({ object, path: pathArray, value: 'foo' })
+    expect(pathArray).toEqual(['a', 'b', 'c'])
+  })
 })
 
 describe('get', () => {
@@ -92,6 +99,13 @@ describe('get', () => {
       objectd.get(object, 'a.b')
     ).toBeNull()
   })
+
+  test('array parameter mutation', () => {
+    let object = { a: { b: { c: 'd' } } }
+    let pathArray = ['a', 'b', 'c']
+    object.get(object, pathArray)
+    expect(pathArray).toEqual(['a', 'b', 'c'])
+  })
 })
 
 describe('exists', () => {
@@ -119,6 +133,13 @@ describe('exists', () => {
     expect(
       objectd.exists(object, 'foo.bar.a.e')
     ).toBe(false)
+  })
+
+  test('array parameter mutation', () => {
+    let object = { a: { b: { c: 'd' } } }
+    let pathArray = ['a', 'b', 'c']
+    object.exists({ object, path: pathArray })
+    expect(pathArray).toEqual(['a', 'b', 'c'])
   })
 })
 
