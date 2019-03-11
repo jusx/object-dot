@@ -40,8 +40,20 @@ describe('set', () => {
   test('array parameter mutation', () => {
     let object = { a: { b: { c: 'd' } } }
     let pathArray = ['a', 'b', 'c']
-    object.set({ object, path: pathArray, value: 'foo' })
+    objectd.set({ object, path: pathArray, value: 'foo' })
     expect(pathArray).toEqual(['a', 'b', 'c'])
+  })
+
+  test('deep chain with a property that exist', () => {
+    let object = { a: { b: { c: 'a' } } }
+    objectd.set(object, 'a.b.c.d.e', 'foo')
+    expect(object.a.b.c.d.e).toBe('foo')
+  })
+
+  test('deep chain with a property that is falsy', () => {
+    let object = { a: { b: { c: false } } }
+    objectd.set(object, 'a.b.c.d.e', 'foo')
+    expect(object.a.b.c.d.e).toBe('foo')
   })
 })
 
@@ -103,7 +115,7 @@ describe('get', () => {
   test('array parameter mutation', () => {
     let object = { a: { b: { c: 'd' } } }
     let pathArray = ['a', 'b', 'c']
-    object.get(object, pathArray)
+    objectd.get(object, pathArray)
     expect(pathArray).toEqual(['a', 'b', 'c'])
   })
 })
@@ -138,16 +150,18 @@ describe('exists', () => {
   test('array parameter mutation', () => {
     let object = { a: { b: { c: 'd' } } }
     let pathArray = ['a', 'b', 'c']
-    object.exists({ object, path: pathArray })
+    objectd.exists({ object, path: pathArray })
     expect(pathArray).toEqual(['a', 'b', 'c'])
   })
 })
 
 describe('extend', () => {
-  const object = { foo: { bar: { a: { b: 'foo' } } } }
-  objectd.extend()
-  Object.set(object, 'foo.isCool', true)
-  expect(object.foo.isCool).toBe(true)
-  expect(Object.get(object, 'foo.bar.a.b')).toBe('foo')
-  expect(Object.exists(object, 'foo.bar')).toBe(true)
+  test('basic extend', () => {
+    const object = { foo: { bar: { a: { b: 'foo' } } } }
+    objectd.extend()
+    Object.set(object, 'foo.isCool', true)
+    expect(object.foo.isCool).toBe(true)
+    expect(Object.get(object, 'foo.bar.a.b')).toBe('foo')
+    expect(Object.exists(object, 'foo.bar')).toBe(true)
+  })
 })
