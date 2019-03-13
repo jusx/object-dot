@@ -55,6 +55,12 @@ describe('set', () => {
     objectd.set(object, 'a.b.c.d.e', 'foo')
     expect(object.a.b.c.d.e).toBe('foo')
   })
+
+  test('overwrite is false', () => {
+    let object = { a: { b: { c: 'a' } } }
+    objectd.set(object, 'a.b.c.d.e', 'foo', false)
+    expect(object.a.b.c).toBe('a')
+  })
 })
 
 describe('get', () => {
