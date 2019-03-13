@@ -29,6 +29,30 @@ console.log(
 )
 ```
 
+By default any property values that exists in the path of the chained property is overwritten. The API can be instructed to not overwrite but instead do nothing when this scenario is found. Consider the following:
+
+```js
+require('object-dot').extend()
+let obj = { a: { b: { c: 'foo' } } }
+
+// By default, the value for `c` is overwritten
+console.log(
+  Object.set(obj, 'a.b.c.d', 'foo')
+)
+//=> { a: { b: { c: { d: 'foo' } } } }
+
+// Tell the API not to overwrite
+console.log(
+  Object.set(obj, 'a.b.c.d', 'foo', false)
+)
+//=> { a: { b: { c: 'foo' } } }
+
+// Alternatively, you may call it with an object as a parameter
+Object.set({ object: obj, path: 'a.b.c.d', value: 'foo', overwrite: false })
+```
+
+
+
 ## `get`
 
 Get the value of a nested chain of objects without checking each object in the chain for its existence.
