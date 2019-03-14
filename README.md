@@ -4,6 +4,8 @@
 
 Easily use dot notation to `get`, or `set` a property of a nested object. A node module.
 
+> 💥 100% code coverage, zero dependencies and flexible APIs.
+
 # Usage
 
 ## `set`
@@ -29,7 +31,7 @@ console.log(
 )
 ```
 
-By default any property values that exists in the path of the chained property is overwritten. The API can be instructed to not overwrite but instead do nothing when this scenario is found. Consider the following:
+By default any property with values that exists in the path of the chained property is overwritten. The API can be instructed to not overwrite but instead do nothing when this scenario is found. Consider the following:
 
 ```js
 require('object-dot').extend()
@@ -50,8 +52,6 @@ console.log(
 // Alternatively, you may call it with an object as a parameter
 Object.set({ object: obj, path: 'a.b.c.d', value: 'foo', overwrite: false })
 ```
-
-
 
 ## `get`
 
